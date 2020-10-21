@@ -14,11 +14,15 @@ class Test {
     //     System.out.println("3で割ると2余ります");
     //     break;
     
-    int number = 10;
+    // int number = 10;
     
-    while(number>0){
-      System.out.println(number);
-      number--;
+    // while(number>0){
+    //   System.out.println(number);
+    //   number--;
+    // }
+
+    for(int i=1;i<=10;i++){
+      System.out.println(i+"回目のループです");
     }
 
     }
