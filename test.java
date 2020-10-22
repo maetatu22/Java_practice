@@ -25,25 +25,28 @@ class Test {
     //   System.out.println(i+"回目のループです");
     // }
 
-    System.out.println("=== while文 ===");
-    int i = 1;
-    while (i % 5 == 10) {
-      // iが5の倍数のとき、繰り返し処理を終了してください
-      if(i>5){
-        break;
-      }
+    // System.out.println("=== while文 ===");
+    // int i = 1;
+    // while (i % 5 == 10) {
+    //   // iが5の倍数のとき、繰り返し処理を終了してください
+    //   if(i>5){
+    //     break;
+    //   }
       
-      System.out.println(i);
-      i++;
-    }
+    //   System.out.println(i);
+    //   i++;
+    // }
     
-    System.out.println("=== for文 ===");
-    for (int j = 1; j < 10; j++) {
+    // System.out.println("=== for文 ===");
+
+
+
+    for (int i = 1; i < 100; i++) {
       
-      if(j % 3 == 0){
+      if(i % 5 == 0){
       continue;
       }
-      System.out.println(j);
+      System.out.println(i);
 
     }
   }
