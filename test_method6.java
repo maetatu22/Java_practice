@@ -13,9 +13,14 @@ class Test_method6 {
     System.out.println("BMIは" + bmi + "です");
     
     // isHealthyメソッドの結果で条件分岐を行ってください
-    
-    
+    if (isHealthy(bmi)) {
+      System.out.println("健康です");
+    } else {
+      System.out.println("健康ではありません");
+    }
   }
+    
+  
 
   public static String fullName(String firstName, String lastName) {
     return firstName + " " + lastName;
@@ -30,6 +35,9 @@ class Test_method6 {
   }
 
   // isHealthyメソッドを定義してください
+  public static boolean isHealthy(double bmi){
+    return bmi >= 18.5 && bmi < 25.0;
+  }
   
   
 }
