@@ -11,10 +11,10 @@ class Test_method5 {
     System.out.println("体重は" + weight + "kgです");
     
     // 変数bmiに、bmiメソッドを用いてBMIを代入してください
-    
+    double bmi = bmi(height,weight);
     
     // 変数bmiを用いて、「BMIは◯◯です」と出力してください
-    System.out.println();
+    System.out.println("BMIは"+bmi+"です");
     
   }
 
@@ -27,6 +27,8 @@ class Test_method5 {
   }
   
   // bmiメソッドを定義してください
-  
+  public static double bmi(double height, double weight){
+    return weight/height/height;
+  }
   
 }
