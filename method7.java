@@ -1,6 +1,7 @@
 class Method7 {
   public static void main(String[] args){
     printData(fullName("Kate", "Jones"), 27,1.6,50.0);
+    printData(fullName("John", "Christopher", "Smith"), 65, 1.75, 80.0);
   }
 
   public static void printData(String name, int age, double height ,double weight){
@@ -10,6 +11,12 @@ class Method7 {
     System.out.println("体重は" + weight + "kgです");
     double bmi = bmi(height, weight);
     System.out.println("BMIは" + bmi + "です");
+
+    if(isHealthy(bmi)){
+      System.out.println("健康です");
+    }else{
+      System.out.println("健康ではありません");
+    };
     
   }
 
@@ -17,11 +24,15 @@ class Method7 {
     return firstName + " " + lastName;
   }
 
-  public static String fullName(String firstName, String middleName, String ladtName){
+  public static String fullName(String firstName, String middleName, String lastName){
     return firstName + " " + middleName + " " + lastName;
   }
 
   public static double bmi(double height, double weight){
     return weight / height/ height;
+  }
+
+  public static boolean isHealthy(double bmi){
+    return bmi >= 18.5 && bmi < 25.0;
   }
 }
