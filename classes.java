@@ -1,4 +1,4 @@
-class classes {
+class Classes {
   public static void main(String[] args){
     Person.hello();
   }
