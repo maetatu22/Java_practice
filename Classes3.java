@@ -1,9 +1,13 @@
+import java.lang.Math;
+
 public class Classes3 {
   public static void main(String[] args) {
     Person3.printData(Person3.fullName("Kate", "Jones"), 27, 1.6, 50.0);
     Person3.printData(Person3.fullName("John", "Christopher", "Smith"), 65, 1.75, 80.0);
   }
 }
+
+
 
 class Person3 {
   public static void printData(String name, int age, double height, double weight) {
@@ -13,7 +17,7 @@ class Person3 {
    System.out.println("体重は" + weight + "kgです");
 
    double bmi = bmi(height, weight);
-   System.out.println("BMIは" + bmi + "です");
+   System.out.println("BMIは" + Math.round(bmi) + "です");
 
    if (isHealthy(bmi)) {
      System.out.println("標準値です");
