@@ -14,8 +14,17 @@ class Exam2 {
     System.out.print("年齢：");
     int age = scanner.nextInt();
 
-    String fullName = firstName + " " + lastName;
+    System.out.print("身長(m)：");
+    double height = scanner.nextDouble();
 
+    System.out.print("体重(kg)：");
+    double weight = scanner.nextDouble();
+
+    printData(fullName(firstName,lastName),age, height, weight);
+    
+  }
+
+  public static void printData(String fullName, int age, double height, double weight){
     System.out.println("名前は"+fullName+"です");
 
     System.out.println("年齢は"+age+"歳です");
@@ -24,8 +33,13 @@ class Exam2 {
     }else if(age < 20){
       System.out.println("未成年者です");
     }
-    
 
-
+    System.out.println("身長は"+height+"mです");
+    System.out.println("体重は"+weight+"kgです");
   }
+
+  public static String fullName(String firstName, String lastName){
+    return firstName + lastName;
+  }
+
 }
