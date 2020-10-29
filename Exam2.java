@@ -39,6 +39,11 @@ class PersonExam2{
     System.out.println("体重は"+weight+"kgです");
     double bmi = bmi(height,weight);
     System.out.println("BMIは"+Math.round(bmi)+"です");
+    if(isHealthy(bmi)){
+      System.out.println("健康です");
+    }else{
+      System.out.println("健康ではありません");
+    }
   }
 
   public static String fullName(String firstName, String lastName){
@@ -47,6 +52,10 @@ class PersonExam2{
 
   public static double bmi(double height, double weight){
     return weight/height/height;
+  }
+
+  public static boolean isHealthy(double bmi){
+    return bmi >= 18.5 && bmi <= 25.0;
   }
 
 }
