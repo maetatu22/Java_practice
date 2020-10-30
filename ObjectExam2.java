@@ -1,4 +1,4 @@
-class ObjectExam2 {
+class ObjectExams2 {
   public static void main(String[] args){
     PersonObject2 person1 = new PersonObject2("Kate", "Jones", 27, 1.6, 50.0);
     System.out.println(person1.fullName());
