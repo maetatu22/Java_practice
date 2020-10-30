@@ -20,7 +20,7 @@ class PersonObject7 {
   public double height, weight;
 
   PersonObject7(String firstName, String lastName, int age, double height, double weight){
-    PersonObject6.count++;
+    PersonObject7.count++;
     this.firstName = firstName;
     this.lastName = lastName;
     this.age = age;
@@ -29,13 +29,9 @@ class PersonObject7 {
   }
 
   PersonObject7(String firstName, String middleName, String lastName, int age, double height, double weight){
-    PersonObject6.count++;
-    this.firstName = firstName;
+    this(firstName, lastName, age, height, weight);
     this.middleName = middleName;
-    this.lastName = lastName;
-    this.age = age;
-    this.height = height;
-    this.weight = weight;
+   
   }
 
   public String fullName(){
