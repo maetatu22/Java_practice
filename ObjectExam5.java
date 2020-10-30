@@ -6,7 +6,7 @@ class ObjectExam5 {
     PersonObject5 person2 = new PersonObject5("John", "Smith", 65, 1.75, 80.0);
     person2.printData();
 
-    System.out.println("合計"+PersonObject4.count+"人です");
+    PersonObject5.printCount();
   }
 }
 
@@ -40,6 +40,9 @@ class PersonObject5 {
     System.out.println("私の名前は" + this.fullName() + "です");
     System.out.println("年齢は" + this.age + "歳です");
     System.out.println("BMIは" + Math.round(this.bmi()) + "です");
+  }
 
+  public static void printCount(){
+    System.out.println("合計"+PersonObject5.count+"人です");
   }
 }
