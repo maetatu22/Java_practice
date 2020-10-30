@@ -1,16 +1,16 @@
-class ObjectExam4 {
+class ObjectExam5 {
   public static void main(String[] args){
-    PersonObject4 person1 = new PersonObject4("Kate", "Jones", 27, 1.6, 50.0);
+    PersonObject5 person1 = new PersonObject5("Kate", "Jones", 27, 1.6, 50.0);
     person1.printData();
 
-    PersonObject4 person2 = new PersonObject4("John", "Smith", 65, 1.75, 80.0);
+    PersonObject5 person2 = new PersonObject5("John", "Smith", 65, 1.75, 80.0);
     person2.printData();
 
     System.out.println("合計"+PersonObject4.count+"人です");
   }
 }
 
-class PersonObject4 {
+class PersonObject5 {
   public static int count = 0;
 
   public String firstName;
@@ -18,8 +18,8 @@ class PersonObject4 {
   public int age; 
   public double height, weight;
 
-  PersonObject4(String firstName, String lastName, int age, double height, double weight){
-    PersonObject4.count++;
+  PersonObject5(String firstName, String lastName, int age, double height, double weight){
+    PersonObject5.count++;
 
     this.firstName = firstName;
     this.lastName = lastName;
