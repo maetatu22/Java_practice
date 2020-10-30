@@ -1,5 +1,5 @@
 class ObjectExam3 {
-  public stacic void main(String[] args){
+  public static void main(String[] args){
     PersonObject3 person1 = new PersonObject3("Kate", "Jones", 27, 1.6, 50.0);
     person1.printData();
   }
@@ -28,5 +28,9 @@ class PersonObject3 {
     return this.weight / this.height / this.height;
   }
 
-  public 
+  public void printData(){
+    System.out.println("私の名前は"+this.fullName()+"です");
+    System.out.println("年齢は"+this.age+"歳です");
+    System.out.println("BMIは"+Math.round(this.bmi())+"です");
+  }
 }
