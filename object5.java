@@ -14,6 +14,6 @@ class personObject5 {
   public String name;
 
   public void hello(){
-    System.out.println("こんにちは");
+    System.out.println("こんにちは"+this.name+"です");
   }
 }
