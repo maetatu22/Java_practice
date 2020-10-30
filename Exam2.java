@@ -8,9 +8,11 @@ class Exam2 {
     System.out.print("何人分の情報を入力しますか：");
     int multiple = scanner.nextInt();
 
-    for(int i = 0; i < multiple++; i++){
-      int n = i++;
-      System.out.println(n+"人目");
+    int maxAge = 0;
+
+    for(int i = 1; i <= multiple; i++){
+      
+      System.out.println(i+"人目");
 
       System.out.print("名前：");
       String firstName = scanner.next();
@@ -21,6 +23,10 @@ class Exam2 {
       System.out.print("年齢：");
       int age = scanner.nextInt();
 
+      if(age > maxAge){
+        maxAge = age;
+      }
+
       System.out.print("身長(m)：");
       double height = scanner.nextDouble();
 
@@ -28,9 +34,9 @@ class Exam2 {
       double weight = scanner.nextDouble();
 
       PersonExam2.printData(PersonExam2.fullName(firstName,lastName),age, height, weight);
-
     }
 
+    System.out.println("最高年齢は"+maxAge+"歳です");
      
   }
 }
