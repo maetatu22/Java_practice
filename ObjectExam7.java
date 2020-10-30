@@ -7,6 +7,9 @@ class ObjectExam7 {
     person2.printData();
 
     PersonObject7.printCount();
+
+    System.out.println("----------------------");
+    System.out.println("person2のミドルネームは"+person2.getMiddleName()+"です");
   }
 }
 
@@ -31,10 +34,13 @@ class PersonObject7 {
   PersonObject7(String firstName, String middleName, String lastName, int age, double height, double weight){
     this(firstName, lastName, age, height, weight);
     this.middleName = middleName;
-   
   }
 
-  private String fullName(){
+  public String getMiddleName(){
+    return this.middleName;
+  }
+
+  public String fullName(){
     if(this.middleName == null){
       return this.firstName + " " + this.lastName;
     }else{
@@ -42,17 +48,17 @@ class PersonObject7 {
     }
   }
 
-  private double bmi(){
+  public double bmi(){
     return this.weight / this.height / this.height;
   }
 
-  private void printData(){
+  public void printData(){
     System.out.println("私の名前は" + this.fullName() + "です");
     System.out.println("年齢は" + this.age + "歳です");
     System.out.println("BMIは" + Math.round(this.bmi()) + "です");
   }
 
-  private static void printCount(){
+  public static void printCount(){
     System.out.println("合計"+PersonObject7.count+"人です");
   }
 }
