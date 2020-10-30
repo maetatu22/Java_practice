@@ -1,7 +1,7 @@
 class ObjectExam7 {
   public static void main(String[] args){
     PersonObject7 person1 = new PersonObject7("Kate", "Jones", 27, 1.6, 50.0);
-    person1.printData();
+    person1.setMiddleName("Claire");
 
     PersonObject7 person2 = new PersonObject7("John", "Christopher","Smith", 65, 1.75, 80.0);
     person2.printData();
@@ -38,6 +38,10 @@ class PersonObject7 {
 
   public String getMiddleName(){
     return this.middleName;
+  }
+
+  public void setMiddleName(String middleName){
+    this.middleName = middleName;
   }
 
   public String fullName(){
