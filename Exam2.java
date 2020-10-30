@@ -9,6 +9,8 @@ class Exam2 {
     int multiple = scanner.nextInt();
 
     int maxAge = 0;
+    int totalAge = 0;
+    int people = 0;
 
     for(int i = 1; i <= multiple; i++){
       
@@ -27,6 +29,8 @@ class Exam2 {
         maxAge = age;
       }
 
+      totalAge += age;
+
       System.out.print("身長(m)：");
       double height = scanner.nextDouble();
 
@@ -34,10 +38,12 @@ class Exam2 {
       double weight = scanner.nextDouble();
 
       PersonExam2.printData(PersonExam2.fullName(firstName,lastName),age, height, weight);
+
+      people++;
     }
 
     System.out.println("最高年齢は"+maxAge+"歳です");
-     
+    System.out.println("平均年齢は"+totalAge/people+"歳です");
   }
 }
 
