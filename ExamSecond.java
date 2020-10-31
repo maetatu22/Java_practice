@@ -4,6 +4,9 @@ class ExamSecond  {
 
     System.out.println("【自転車の情報】");
     bicycle1.printData();
+
+    System.out.println("-----------------");
+    bicycle1.run(10);
   }
 }
 
@@ -22,6 +25,12 @@ class Bicycle {
     System.out.println("名前："+this.name);
     System.out.println("色："+this.color);
     System.out.println("走行距離："+ this.distance + "km");
+  }
+
+  public void run(int mileage){
+    System.out.println(mileage + "km走ります");
+    this.distance += mileage;
+    System.out.println("走行距離："+this.distance+"km");
   }
   
 }
