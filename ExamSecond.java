@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import javax.print.attribute.standard.ReferenceUriSchemesSupported;
+
 class ExamSecond {
   public static void main(String[] args){
 
@@ -27,6 +29,12 @@ class ExamSecond {
     System.out.print("走る距離を入力してください：");
     int carMileage = scanner.nextInt();
     car1.run(carMileage);
+
+    System.out.println("-----------------");
+    System.out.print("給油する量を入力してください：");
+    int refueling = scanner.nextInt();
+    car1.charge(refueling);
+
   }
 }
 
@@ -87,5 +95,19 @@ class Car {
       System.out.println("走行距離："+this.distance+"km");
       System.out.println("ガソリン量："+this.fuel+"L");
     }
+  }
+
+  public void charge(int refueling){
+    System.out.println(refueling+"L給油します");
+    if(refueling <= 0){
+      System.out.println("給油できません");
+    }else if((refueling+this.fuel) >= 100){
+      System.out.println("満タンまで給油します");
+      this.fuel = 100;
+    }else{
+      this.fuel += refueling;
+      
+    }
+    System.out.println("ガソリン量："+this.fuel+"L");
   }
 }
