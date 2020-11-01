@@ -22,6 +22,11 @@ class ExamSecond {
     
     System.out.println("【車の情報】");
     car1.printData();
+
+    System.out.println("-----------------");
+    System.out.print("走る距離を入力してください：");
+    int carMileage = scanner.nextInt();
+    car1.run(carMileage);
   }
 }
 
@@ -72,7 +77,15 @@ class Car {
 
   public void run(int mileage){
     System.out.println(mileage + "km走ります");
-    this.distance += mileage;
-    System.out.println("走行距離："+this.distance+"km");
+    if(mileage <= this.fuel){
+      this.distance += mileage;
+      this.fuel -= mileage;
+      System.out.println("走行距離："+this.distance+"km");
+      System.out.println("ガソリン量："+this.fuel+"L");
+    }else if(mileage > this.fuel){
+      System.out.println("ガソリンが足りません");
+      System.out.println("走行距離："+this.distance+"km");
+      System.out.println("ガソリン量："+this.fuel+"L");
+    }
   }
 }
