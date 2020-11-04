@@ -1,7 +1,12 @@
 class  Accession {
   public static void main(String[] args) {
     CarAccession car = new CarAccession();
+    car.setName("フェラーリ");
+    car.setColor("赤");
+
     BicycleAccession bicycle = new BicycleAccession();
+    bicycle.setName("ビアンキ");
+    bicycle.setColor("緑");
   }
 }
 
@@ -12,7 +17,7 @@ class BicycleAccession extends Vehicle{
 
 
 class CarAccession extends Vehicle{
-
+  
   
 }
 
