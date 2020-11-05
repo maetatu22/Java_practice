@@ -14,7 +14,7 @@ class  Accession {
     System.out.println("【車の情報】");
     car.printData();
 
-    System.out.println("ガソリン量："+ car.getFuel()+ "L");
+    
 
     System.out.println("-----------------");
     System.out.print("給油する量を入力してください：");
@@ -24,6 +24,7 @@ class  Accession {
 }
 
 class BicycleAccession extends Vehicle{
+ 
   
   
 }
@@ -33,6 +34,13 @@ class CarAccession extends Vehicle{
   private int fuel = 50;
   public int getFuel(){
     return this.fuel;
+  }
+
+  public void printData(){
+    System.out.println("名前：" + this.getName());
+    System.out.println("色：" + this.getColor());
+    System.out.println("走行距離：" + this.getDistance() + "km");
+    System.out.println("ガソリン量："+ this.fuel + "L");
   }
 
   public void charge(int litre) {
